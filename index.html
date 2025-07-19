@@ -499,30 +499,27 @@
                 <p>Explore our collection of mods and ongoing projects:</p>
                 
                 <div class="project-grid" id="projectGrid">
-                    <!-- Projects will be dynamically generated here -->
+                   
                 </div>
             </div>
         </div>
     </div>
 
     <script>
-        // ========================================================================================
-        // EDITABLE PROJECTS CONFIGURATION
-        // ========================================================================================
-        // To add/remove/edit projects, simply modify the projectsData array below
-        // Available status types: 'active', 'development', 'completed', 'planning', 'beta'
+
         
         const projectsData = [
             {
-                title: "DL Mod Manager",
+                title: "Void Menu",
                 status: "active",
                 statusText: "Available Now",
-                description: "A comprehensive mod management tool designed specifically for Dying Light 1.",
+                description: "A CE Table for dying light 1",
                 supports: "Dying Light 1",
-                features: "One-click installation, Easy modding",
-                link: "https://github.com/YoWhatsUpImGood/DL1ModManager",
+                features: "A ton of addresses, bunch of a cheats to use and quality of life",
+                link: "https://github.com/0alter0/void-menu/tree/main",
                 linkText: "Download Now"
             },
+            
 
         ];
 
@@ -530,7 +527,7 @@
         // END OF EDITABLE SECTION
         // ========================================================================================
 
-        // Function to generate project cards
+        
         function generateProjectCards() {
             const projectGrid = document.getElementById('projectGrid');
             projectGrid.innerHTML = '';
@@ -555,19 +552,19 @@
             });
         }
 
-        // Generate project cards on page load
+        
         document.addEventListener('DOMContentLoaded', generateProjectCards);
 
         function showPage(pageId) {
-            // Hide all pages
+            
             document.querySelectorAll('.page').forEach(page => {
                 page.classList.remove('active');
             });
             
-            // Show selected page
+            
             document.getElementById(pageId).classList.add('active');
             
-            // Close mobile menu
+            
             document.getElementById('navMenu').classList.remove('active');
         }
 
@@ -575,7 +572,7 @@
             document.getElementById('navMenu').classList.toggle('active');
         }
 
-        // Create floating particles
+        
         function createParticle() {
             const particle = document.createElement('div');
             particle.className = 'particle';
@@ -589,10 +586,10 @@
             }, 8000);
         }
 
-        // Start particle animation
+        
         setInterval(createParticle, 300);
 
-        // Close mobile menu when clicking outside
+        
         document.addEventListener('click', function(e) {
             const nav = document.getElementById('navMenu');
             const menuButton = document.querySelector('.mobile-menu');
@@ -602,7 +599,7 @@
             }
         });
 
-        // Prevent default anchor behavior
+        
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
